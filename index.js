@@ -12,8 +12,9 @@ function next(node, collection) {
 }
 
 function nodeAt(index, node, collection) {
-    for (let i = index; i > 0; i--) {
-        next(node, collection)
+    let current = headNode(node, collection);
+    for(let i = 0; i < index; i++){
+        current = next(current, collection);
     }
-    return
+    return current;
 }
